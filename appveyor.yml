@@ -32,3 +32,5 @@ build_script:
 
 after_build:
 - cmd: dotnet publish
+
+test: off

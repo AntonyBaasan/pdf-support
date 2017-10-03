@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/tcren7hw7jmy58pu?svg=true)](https://ci.appveyor.com/project/AntonyBaasan/pdf-support)
