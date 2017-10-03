@@ -1,6 +1,8 @@
 # Example appveyor.xml file
 # https://github.com/IlyaFinkelshteyn/CoreWebApplication1/blob/master/appveyor.yml
 
+image: Visual Studio 2017
+
 # version format
 version: 1.0.{build}
 
@@ -16,6 +18,14 @@ only_commits:
 
 
 install:
-- cmd: cd pdf-merge-server
-- cmd: dotnet restore
+- cmd: cd
 - cmd: dotnet build
+
+before_build:
+  # Display .NET Core version
+  - cmd: dotnet --version
+  # Display minimal restore text
+  - cmd: dotnet restore ./pdf-merge-server/webapi/webapi.csproj --verbosity m
+build_script:
+  # output will be in ./src/bin/debug/netcoreapp1.1/publish
+  - cmd: dotnet publish ./pdf-merge-server/webapi/webapi.csproj --verbosity m
