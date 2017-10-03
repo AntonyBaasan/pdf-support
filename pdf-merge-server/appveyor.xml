@@ -1,0 +1,21 @@
+# Example appveyor.xml file
+# https://github.com/IlyaFinkelshteyn/CoreWebApplication1/blob/master/appveyor.yml
+
+# version format
+version: 1.0.{build}
+
+branches:
+  # whitelist
+  only:
+    - master
+
+# Including commits with particular message or from specific user
+only_commits:
+  message: /build/                # Start a new build if message contains 'build'
+#  author: jack@company.com        # Start a new build for commit of user with email jack@company.com
+
+
+install:
+- cmd: cd pdf-merge-server
+- cmd: dotnet restore
+- cmd: dotnet build
