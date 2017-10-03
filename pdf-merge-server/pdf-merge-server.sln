@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi", "webapi\webapi.csproj", "{DAFE9B81-4AC2-404C-9106-4CC2BD8B0520}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapi.test", "webapi.test\webapi.test.csproj", "{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{DAFE9B81-4AC2-404C-9106-4CC2BD8B0520}.Release|x64.Build.0 = Release|x64
 		{DAFE9B81-4AC2-404C-9106-4CC2BD8B0520}.Release|x86.ActiveCfg = Release|x86
 		{DAFE9B81-4AC2-404C-9106-4CC2BD8B0520}.Release|x86.Build.0 = Release|x86
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Debug|x64.ActiveCfg = Debug|x64
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Debug|x64.Build.0 = Debug|x64
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Debug|x86.ActiveCfg = Debug|x86
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Debug|x86.Build.0 = Debug|x86
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Release|x64.ActiveCfg = Release|x64
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Release|x64.Build.0 = Release|x64
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Release|x86.ActiveCfg = Release|x86
+		{CBC71FFD-43B6-48BD-AE99-5559E10AA96A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
