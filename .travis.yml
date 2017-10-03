@@ -43,5 +43,6 @@ cache:
   directories: node_modules
 
 script:
+  - cd pdf-merge-client
   - npm run tests.all
 
