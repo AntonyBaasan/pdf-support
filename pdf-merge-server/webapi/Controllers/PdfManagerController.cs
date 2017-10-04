@@ -3,6 +3,7 @@ using PdfManager.Services;
 
 namespace webapi.Controllers
 {
+    [Route("api/[controller]")]
     public class PdfManagerController : Controller
     {
         [HttpGet]
