@@ -28,7 +28,7 @@ before_build:
 build_script:
   # output will be in ./src/bin/debug/netcoreapp1.1/publish
   - cmd: dotnet build
-  - cmd: dotnet test webapi.test/webapi.test.csproj
+  - cmd: dotnet test
 
 after_build:
 - cmd: dotnet publish
