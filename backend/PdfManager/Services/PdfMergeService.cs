@@ -1,3 +1,5 @@
+using System;
+
 namespace PdfManager.Services
 {
     public class PdfMergeService : IPdfMergeService
