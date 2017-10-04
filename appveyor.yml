@@ -22,13 +22,14 @@ install:
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
-  - cmd: cd ./pdf-merge-server
+  - cmd: cd ./backend
   # Display minimal restore text
   - cmd: dotnet restore
 build_script:
   # output will be in ./src/bin/debug/netcoreapp1.1/publish
   - cmd: dotnet build
-  - cmd: dotnet test
+  - cmd: dotnet test PdfManager.Tests/PdfManager.Tests.csproj
+  - cmd: dotnet test WebApi.Tests/WebApi.Tests.csproj
 
 after_build:
 - cmd: dotnet publish
