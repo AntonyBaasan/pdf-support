@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceRoot}/pdf-merge-server/webapi/bin/Debug/netcoreapp2.0/webapi.dll",
+            "program": "${workspaceRoot}/backend/webapi/bin/Debug/netcoreapp2.0/webapi.dll",
             "args": [],
-            "cwd": "${workspaceRoot}/pdf-merge-server/webapi",
+            "cwd": "${workspaceRoot}/backend/webapi",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

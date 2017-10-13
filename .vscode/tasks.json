@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/pdf-merge-server/webapi/webapi.csproj"
+                "${workspaceRoot}/backend/webapi/webapi.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"
