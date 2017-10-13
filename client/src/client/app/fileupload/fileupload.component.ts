@@ -22,7 +22,7 @@ export class FileUploadComponent implements OnInit {
 
   }
 
-  private upload() {
+  public upload() {
     const fileBrowser = this.fileInput.nativeElement;
     if (fileBrowser.files && fileBrowser.files[0]) {
       const formData = new FormData();

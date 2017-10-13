@@ -15,8 +15,10 @@ import {
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { FileUploadComponent } from './fileupload/fileupload.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { HttpModule } from '@angular/http';
 
 export function main() {
 
@@ -28,10 +30,10 @@ export function main() {
     ];
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [FormsModule, RouterTestingModule.withRoutes(config)],
+        imports: [FormsModule, RouterTestingModule.withRoutes(config), HttpModule],
         declarations: [TestComponent, ToolbarComponent,
           NavbarComponent, AppComponent,
-          HomeComponent, AboutComponent],
+          HomeComponent, AboutComponent, FileUploadComponent],
         providers: [
           { provide: APP_BASE_HREF, useValue: '/' }
         ]
