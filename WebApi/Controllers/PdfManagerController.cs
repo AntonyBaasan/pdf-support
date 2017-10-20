@@ -43,12 +43,12 @@ namespace webapi.Controllers
             // Don't rely on or trust the FileName property without validation.
             return Ok(new { count = files.Count, size, filePath });
         }
-
-        private string GetAppTempDirectory(){
+        private string GetAppTempDirectory()
+        {
             var filePath = Directory.GetCurrentDirectory();
             filePath = Directory.GetParent(filePath).FullName;
             filePath = Path.Combine(filePath, "temp");
-            if(!Directory.Exists(filePath))
+            if (!Directory.Exists(filePath))
                 Directory.CreateDirectory(filePath);
             return filePath;
         }
