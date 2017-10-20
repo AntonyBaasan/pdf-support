@@ -24,13 +24,15 @@ namespace webapi.Controllers
             long size = files.Sum(f => f.Length);
 
             // full path to file in temp location
-            var filePath = Path.GetTempFileName();
+            // var filePath = Path.GetTempFileName();
+            var filePath = GetAppTempDirectory();
 
             foreach (var formFile in files)
             {
                 if (formFile.Length > 0)
                 {
-                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    var fileFullName = Path.Combine(filePath, formFile.FileName);
+                    using (var stream = new FileStream(fileFullName, FileMode.Create))
                     {
                         await formFile.CopyToAsync(stream);
                     }
@@ -42,5 +44,13 @@ namespace webapi.Controllers
             return Ok(new { count = files.Count, size, filePath });
         }
 
+        private string GetAppTempDirectory(){
+            var filePath = Directory.GetCurrentDirectory();
+            filePath = Directory.GetParent(filePath).FullName;
+            filePath = Path.Combine(filePath, "temp");
+            if(!Directory.Exists(filePath))
+                Directory.CreateDirectory(filePath);
+            return filePath;
+        }
     }
 }
