@@ -22,7 +22,6 @@ branches:
 before_build:
   # Display .NET Core version
   - cmd: dotnet --version
-  - cmd: cd ./backend
   # Display minimal restore text
   - cmd: dotnet restore
 build_script:
