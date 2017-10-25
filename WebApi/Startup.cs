@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Cors;
 
 namespace webapi
 {
@@ -24,6 +26,13 @@ namespace webapi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.Configure<FormOptions>(options =>
+            {
+                options.ValueCountLimit = 10; //default 1024
+                options.ValueLengthLimit = int.MaxValue; //not recommended value
+                options.MultipartBodyLengthLimit = long.MaxValue;
+                options.MemoryBufferThreshold = int.MaxValue;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,6 +42,10 @@ namespace webapi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder=>{
+                builder.WithOrigins("http://localhost:5555");
+            }); 
 
             app.UseMvc();
         }
