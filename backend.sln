@@ -3,7 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-project("{fae04ec0-301f-11d3-bf4b-00c04f79efbc}") = "WebApi", "WebApi\WebApi.csproj", "{dafe9b81-4ac2-404c-9106-4cc2bd8b0520}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager.Tests", "FileManager.Tests\FileManager.Tests.csproj", "{1E4BE7A7-5B1A-4F26-9489-5105E96CC524}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManager", "FileManager\FileManager.csproj", "{734AA5BF-10D4-4C75-BB6E-B7D6A03A381F}"
