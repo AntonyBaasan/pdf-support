@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Tests", "WebApi.Tests\WebApi.Tests.csproj", "{F1425477-0ADC-465F-985C-EB5B0E2B1FDB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{8EFE55BD-DB6B-4B85-A5CE-AF67FD94F93F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BEBA0657-FC61-425F-997C-BD872A62A661}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -100,5 +102,10 @@ Global
 		{8EFE55BD-DB6B-4B85-A5CE-AF67FD94F93F}.Release|x64.Build.0 = Release|x64
 		{8EFE55BD-DB6B-4B85-A5CE-AF67FD94F93F}.Release|x86.ActiveCfg = Release|x86
 		{8EFE55BD-DB6B-4B85-A5CE-AF67FD94F93F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E4BE7A7-5B1A-4F26-9489-5105E96CC524} = {BEBA0657-FC61-425F-997C-BD872A62A661}
+		{A130E6E6-95C6-417A-8F8B-02A40422830E} = {BEBA0657-FC61-425F-997C-BD872A62A661}
+		{F1425477-0ADC-465F-985C-EB5B0E2B1FDB} = {BEBA0657-FC61-425F-997C-BD872A62A661}
 	EndGlobalSection
 EndGlobal
